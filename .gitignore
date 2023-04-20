@@ -1,0 +1,4 @@
+**/*.pdf
+images/**
+/*.typ
+!/_usage.typ
