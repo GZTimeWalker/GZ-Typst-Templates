@@ -1,8 +1,8 @@
 #let line_height = 1em
 
 #let fonts = (
-  text: ("CMU Serif", "Source Han Serif SC"),
-  sans: ("Source Han Sans SC"),
+  text: ("CMU Serif", "Source Han Serif SC", "Source Han Serif"),
+  sans: ("Source Han Sans SC", "Source Han Sans"),
   code: ("JetBrains Mono", "Consolas"),
 )
 
