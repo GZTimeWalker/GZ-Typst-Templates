@@ -15,7 +15,7 @@
 ) = {
     set document(title: title)
     set page(paper: "a4", numbering: "1", number-align: center)
-    set text(font: fonts.text, lang: "zh", size: 14pt)
+    set text(font: fonts.text, lang: "zh", size: 13pt)
     set heading(numbering: "1.1.")
 
     show raw.where(block: true): block.with(
@@ -36,6 +36,11 @@
         inset: (x: 5pt, y: 0pt),
         outset: (y: 4pt),
         radius: 3pt
+    )
+
+    show raw: text.with(
+        font: fonts.code,
+        size: 1em,
     )
 
     show heading: it => [
@@ -63,6 +68,8 @@
             sized_heading(it, 14pt, "medium", 0.3em, 0.1em)
         }
     ]
+
+    show link: underline
 
     let fieldname(name) = [
         #set align(right + horizon)
