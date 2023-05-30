@@ -15,7 +15,7 @@
 ) = {
     set document(title: title)
     set page(paper: "a4", numbering: "1", number-align: center)
-    set text(font: fonts.text, lang: "zh", size: 13pt)
+    set text(font: fonts.text, lang: "zh", size: 11pt)
     set heading(numbering: "1.1.")
 
     show raw.where(block: true): block.with(
@@ -59,13 +59,13 @@
         ]
 
         #if it.level == 1 {
-            sized_heading(it, 24pt, "semibold", 1em, 0.3em)
+            sized_heading(it, 20pt, "semibold", 1em, 0.3em)
         } else if it.level == 2 {
-            sized_heading(it, 18pt, "semibold", 0.7em, 0.2em)
+            sized_heading(it, 16pt, "semibold", 0.7em, 0.2em)
         } else if it.level == 3 {
-            sized_heading(it, 16pt, "medium", 0.5em, 0.2em)
+            sized_heading(it, 14pt, "medium", 0.5em, 0.2em)
         } else {
-            sized_heading(it, 14pt, "medium", 0.3em, 0.1em)
+            sized_heading(it, 12pt, "medium", 0.3em, 0.1em)
         }
     ]
 
@@ -91,30 +91,30 @@
         }
         #linebreak()
         #v(50pt, weak: true)
-        #block(text(weight: "semibold", 2.3em, title))
+        #block(text(weight: "semibold", 30pt, title))
         #v(50pt, weak: true)
-        #block(text(weight: "medium", 1.8em, subtitle))
+        #block(text(weight: "medium", 24pt, subtitle))
 
         #v(140pt, weak: true)
-        #set text(1.1em)
+        #set text(14.5pt)
 
         #grid(
             columns: (200pt, 240pt),
             row-gutter: 1em,
-            fieldname(text("姓") + h(2em) + text("名：")),
+            fieldname(text("姓") + h(2em) + text("名：") + h(1em)),
             fieldvalue(name),
-            fieldname(text("学") + h(2em) + text("号：")),
+            fieldname(text("学") + h(2em) + text("号：") + h(1em)),
             fieldvalue(stdid),
-            fieldname(text("教学班号：")),
+            fieldname(text("教学班号：") + h(1em)),
             fieldvalue(classid),
-            fieldname(text("专") + h(2em) + text("业：")),
+            fieldname(text("专") + h(2em) + text("业：") + h(1em)),
             fieldvalue(major),
-            fieldname(text("院") + h(2em) + text("系：")),
+            fieldname(text("院") + h(2em) + text("系：") + h(1em)),
             fieldvalue(school),
         )
 
         #v(40pt)
-        #set text(1em)
+        #set text(13pt)
         #text(time)
         #pagebreak()
     ]
