@@ -3,8 +3,8 @@
 #import "../functions/dirac.typ": *
 
 #let report(
-    subject: "实验报告",
-    title: "实验一",
+    subject: "课程",
+    title: "作业一",
     name: "张三",
     stdid: "11223344",
     body

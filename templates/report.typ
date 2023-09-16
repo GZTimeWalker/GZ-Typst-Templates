@@ -1,5 +1,6 @@
 #import "../functions/style.typ": *
 #import "../functions/booktab.typ": *
+#import "../functions/dirac.typ": *
 
 #let report(
     title: "实验报告",
@@ -121,6 +122,9 @@
 
     set align(left + top)
     set par(justify: true, first-line-indent: 2em, leading: line_height)
+    set math.vec(delim: "[")
+    set math.mat(delim: "[")
+
     show par: set block(spacing: line_height)
 
     body

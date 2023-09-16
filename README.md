@@ -1,4 +1,6 @@
-# Typst Template
+# GZ Typst Templates
+
+For my personal usage.
 
 ## Fonts
 
@@ -8,14 +10,27 @@ Install the fonts by yourself.
 - sans: ("Source Han Sans SC"),
 - code: ("JetBrains Mono", "Consolas"),
 
-## Install Typst
-
-```bash
-cargo install --git https://github.com/typst/typst
-```
-
 ## Usage
 
-```bash
-typst watch _usage.typ
+- Install [Typst](https://typst.app)
+- Clone this repo to any directory
+- Link the repo to your project by `ln -s /path/to/repo/ ./templates`
+- Use this template in Typst
+
+## Templates
+
+### Report
+
+Use for writing lab reports.
+
+```
+#import "./templates/templates/report.typ": *
+```
+
+### Homework
+
+Use for writing homework.
+
+```
+#import "./templates/templates/homework.typ": *
 ```
