@@ -1,5 +1,6 @@
 #import "../functions/style.typ": *
 #import "../functions/booktab.typ": *
+#import "../functions/dirac.typ": *
 
 #let report(
     subject: "实验报告",
@@ -40,27 +41,23 @@
 
     show heading: it => [
         // Cancel indentation for headings of level 2 or above
-        #set par(first-line-indent: 0em)
+        #set par(first-line-indent: 0em, hanging-indent: 2em)
 
         #let sized_heading(it, size, weight, mt, mb) = [
             #set text(size, weight: weight)
-            // #v(mt)
-            // #if it.numbering != none {
-            //     counter(heading).display()
-            //     h(0.1em)
-            // }
+            #v(mt)
             #text(size, weight: weight, it.body)
             #v(mb)
         ]
 
         #if it.level == 1 {
-            sized_heading(it, 20pt, "semibold", 1em, 0.3em)
+            sized_heading(it, 20pt, "semibold", 1em, 0.6em)
         } else if it.level == 2 {
-            sized_heading(it, 16pt, "semibold", 0.7em, 0.2em)
+            sized_heading(it, 16pt, "semibold", 0.7em, 0.7em)
         } else if it.level == 3 {
-            sized_heading(it, 14pt, "medium", 0.5em, 0.2em)
+            sized_heading(it, 14pt, "medium", 0.5em, 0.5em)
         } else {
-            sized_heading(it, 12pt, "medium", 0.3em, 0.1em)
+            sized_heading(it, 12pt, "medium", 0.3em, 0.3em)
         }
     ]
 
@@ -101,6 +98,9 @@
 
     set align(left + top)
     set par(justify: true, first-line-indent: 0pt, leading: line_height)
+    set math.vec(delim: "[")
+    set math.mat(delim: "[")
+
     show par: set block(spacing: line_height)
 
     body
