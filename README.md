@@ -40,7 +40,7 @@ Suggestions: use relative path for the link, because Typst uses the directory of
 
 Use for writing lab reports.
 
-用来写实验报告的模板。
+用来写实验报告的模板，有封面。
 
 ```typ
 #import "./base/templates/report.typ": *
@@ -61,6 +61,8 @@ Use for writing lab reports.
 ### Homework
 
 Use for writing homework.
+
+这个模板用来写作业（数学作业），就是每一页最上面会有一些信息。
 
 ```typ
 #import "./base/templates/homework.typ": *
