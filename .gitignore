@@ -2,4 +2,4 @@
 images/**
 !images/sysu.png
 /*.typ
-!/_usage.typ
+!/usage.typ
