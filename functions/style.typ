@@ -6,12 +6,6 @@
   code: ("JetBrains Mono", "Consolas"),
 )
 
-#let textbf(it) = block(
-  text(
-    font: fonts.sans,
-    weight: "semibold",
-    it
-  )
-)
+#let textbf(it) = block(text(font: fonts.sans, weight: "semibold", it))
 
 #let textit(it) = block(text(style: "italic", it))
