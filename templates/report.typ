@@ -1,6 +1,6 @@
 #import "../functions/style.typ": *
 #import "../functions/booktab.typ": *
-#import "../functions/dirac.typ": *
+#import "@preview/physica:0.8.0": *
 
 #let report(
   title: "实验报告",

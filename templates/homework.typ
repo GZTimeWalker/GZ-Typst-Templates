@@ -1,6 +1,6 @@
 #import "../functions/style.typ": *
 #import "../functions/booktab.typ": *
-#import "../functions/dirac.typ": *
+#import "@preview/physica:0.8.0": *
 
 #let report(subject: "课程", title: "作业一", name: "张三", stdid: "11223344", body) = {
   set document(title: title)
