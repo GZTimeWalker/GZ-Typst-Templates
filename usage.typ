@@ -33,14 +33,24 @@
   [10], [$ (n(n+1)) / 2 $], [11],
 )
 
+=== 公式
+
 $ sum_(k=0)^n k
     &= 1 + ... + n \
     &= (n(n+1)) / 2 $
 
 == 什么是 Typst
 
+#lorem(20)
+
+行内代码块： `#lorem(20)`
+
+
+
 ```c
 int main() {
+  // 这是一句中文注释
+  // This is a comment in English
   printf("Hello, world!");
   return 0;
 }

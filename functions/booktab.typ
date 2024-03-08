@@ -1,5 +1,5 @@
 #import "helpers.typ": *
-#import "style.typ": *
+#import "fonts.typ": *
 
 #let booktab(columns: (), aligns: (), width: auto, caption: none, ..cells) = {
   let headers = cells.pos().slice(0, columns.len())

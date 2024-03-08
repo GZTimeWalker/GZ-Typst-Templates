@@ -1,6 +1,4 @@
-#import "../functions/style.typ": *
-#import "../functions/booktab.typ": *
-#import "@preview/physica:0.8.0": *
+#import "shared.typ": *
 
 #let report(
   title: "实验报告",
@@ -15,65 +13,18 @@
   body,
 ) = {
   set document(title: title)
-  set page(paper: "a4", numbering: "1", number-align: center)
-  set text(font: fonts.text, lang: "zh", size: 11pt)
-  set heading(numbering: "1.1.")
 
-  show raw.where(block: true): block.with(
-    fill: rgb(248, 248, 248),
-    inset: (x: 1.25em, y: 1em),
-    width: 100%,
-    radius: 4pt,
-  )
-
-  show raw.where(block: true): par.with(first-line-indent: 0em, justify: true, leading: 8pt)
-
-  show raw.where(block: false): box.with(
-    fill: rgb(248, 248, 248),
-    inset: (x: 5pt, y: 0pt),
-    outset: (y: 4pt),
-    radius: 3pt,
-  )
-
-  show raw: text.with(font: fonts.code, size: 1em)
-
-  show heading: it => [
-    // Cancel indentation for headings of level 2 or above
-    #set par(first-line-indent: 0em)
-
-    #let sized_heading(it, size, weight, mt, mb) = [
-      #set text(size, weight: weight)
-      #v(mt)
-      #if it.numbering != none {
-        counter(heading).display()
-        h(0.1em)
-      }
-      #text(size, weight: weight, it.body)
-      #v(mb)
-    ]
-
-    #if it.level == 1 {
-      sized_heading(it, 20pt, "semibold", 1em, 0.3em)
-    } else if it.level == 2 {
-      sized_heading(it, 16pt, "semibold", 0.7em, 0.2em)
-    } else if it.level == 3 {
-      sized_heading(it, 14pt, "medium", 0.5em, 0.2em)
-    } else {
-      sized_heading(it, 12pt, "medium", 0.3em, 0.1em)
-    }
-  ]
-
-  show link: underline
+  show: shared
 
   let fieldname(name) = [
     #set align(right + horizon)
-    #set text(font: fonts.text)
+    #set text(font: fonts.serif)
     #name
   ]
 
   let fieldvalue(value) = [
     #set align(left + horizon)
-    #set text(font: fonts.text)
+    #set text(font: fonts.serif)
     #value
   ]
 
@@ -115,10 +66,6 @@
 
   set align(left + top)
   set par(justify: true, first-line-indent: 2em, leading: line_height)
-  set math.vec(delim: "[")
-  set math.mat(delim: "[")
-
-  show par: set block(spacing: line_height)
 
   body
 }
